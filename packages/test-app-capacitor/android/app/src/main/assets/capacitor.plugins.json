@@ -1,9 +1,5 @@
 [
 	{
-		"pkg": "cap-demo-plugin",
-		"classpath": "io.ionic.demoplugin.DemoPlugin"
-	},
-	{
 		"pkg": "@capacitor/app",
 		"classpath": "com.capacitorjs.plugins.app.AppPlugin"
 	},
@@ -18,5 +14,13 @@
 	{
 		"pkg": "@capacitor/status-bar",
 		"classpath": "com.capacitorjs.plugins.statusbar.StatusBarPlugin"
+	},
+	{
+		"pkg": "appd-ionic-capacitor-plugin",
+		"classpath": "com.appdynamics.appd.mrum.plugins.ionic.ADEUMMobileCapacitorPluginPlugin"
+	},
+	{
+		"pkg": "cap-demo-plugin",
+		"classpath": "io.ionic.demoplugin.DemoPlugin"
 	}
 ]

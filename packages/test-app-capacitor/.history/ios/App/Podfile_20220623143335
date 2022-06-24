@@ -1,6 +1,5 @@
 platform :ios, '12.0'
 use_frameworks!
-#use_modular_headers!
 
 # workaround to avoid Xcode caching of Pods that requires
 # Product -> Clean Build Folder after new Cordova plugins installed
@@ -8,6 +7,7 @@ use_frameworks!
 install! 'cocoapods', :disable_input_output_paths => true
 
 def capacitor_pods
+  
   pod 'Capacitor', :path => '../../../../node_modules/@capacitor/ios'
   pod 'CapacitorCordova', :path => '../../../../node_modules/@capacitor/ios'
   pod 'CapacitorApp', :path => '../../../../node_modules/@capacitor/app'
@@ -18,12 +18,7 @@ def capacitor_pods
   pod 'CapDemoPlugin', :path => '../../../cap-demo-plugin'
 end
 
-def appd_agent_pods
-  pod 'AppDynamicsAgent'
-end
-
 target 'App' do
-  appd_agent_pods
   capacitor_pods
   # Add your Pods here
 end

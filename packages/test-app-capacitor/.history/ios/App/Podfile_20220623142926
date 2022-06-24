@@ -1,6 +1,5 @@
 platform :ios, '12.0'
 use_frameworks!
-#use_modular_headers!
 
 # workaround to avoid Xcode caching of Pods that requires
 # Product -> Clean Build Folder after new Cordova plugins installed
@@ -18,12 +17,7 @@ def capacitor_pods
   pod 'CapDemoPlugin', :path => '../../../cap-demo-plugin'
 end
 
-def appd_agent_pods
-  pod 'AppDynamicsAgent'
-end
-
 target 'App' do
-  appd_agent_pods
   capacitor_pods
   # Add your Pods here
 end
