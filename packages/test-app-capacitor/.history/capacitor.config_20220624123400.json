@@ -15,3 +15,4 @@
     }
   }
 }
+// --variable COLLECTOR_URL="https://col.eum-appdynamics.com" --save

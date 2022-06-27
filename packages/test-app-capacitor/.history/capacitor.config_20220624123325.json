@@ -6,7 +6,7 @@
   "plugins": {
     "ADEUMMobileCapacitorPlugin": {
       "ADEUM_APP_KEY": "AD-AAB-ABS-DFX",
-      "ADEUM_COLLECTOR_URL": "https://col.eum-appdynamics.com",
+      "ADEUM_COLLECTOR_URL": "http://account.appdynamics.com",
       "ADEUM_SCREENSHOT_URL": "",
       "ADEUM_SCREENSHOTS_ENABLED": false,
       "ADEUM_LOGGING_LEVEL": 0,
@@ -15,3 +15,4 @@
     }
   }
 }
+//ionic cordova plugin add appd-plugin-eum-mobile --variable APP_KEY="AD-AAB-ABS-DFX" --variable COLLECTOR_URL="https://col.eum-appdynamics.com" --save

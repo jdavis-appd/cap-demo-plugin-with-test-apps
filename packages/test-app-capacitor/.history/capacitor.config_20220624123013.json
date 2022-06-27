@@ -5,8 +5,8 @@
   "bundledWebRuntime": false,
   "plugins": {
     "ADEUMMobileCapacitorPlugin": {
-      "ADEUM_APP_KEY": "AD-AAB-ABS-DFX",
-      "ADEUM_COLLECTOR_URL": "https://col.eum-appdynamics.com",
+      "ADEUM_APP_KEY": "key_here",
+      "ADEUM_COLLECTOR_URL": "http://account.appdynamics.com",
       "ADEUM_SCREENSHOT_URL": "",
       "ADEUM_SCREENSHOTS_ENABLED": false,
       "ADEUM_LOGGING_LEVEL": 0,
@@ -15,3 +15,4 @@
     }
   }
 }
+#
