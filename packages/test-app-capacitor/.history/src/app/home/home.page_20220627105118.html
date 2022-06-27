@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Blank </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="medium">AppDynamics Testing</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-card>
+      <p>New Session with Name:</p>
+      <p>
+        <ion-input
+          placeholder="Session Name"
+          type="text"
+          style="border: solid 1px #000"
+        ></ion-input>
+      </p>
+      <p>
+        <ion-button fill="outline" (click)="newSession()"
+          >Create New Session</ion-button
+        >
+      </p>
+    </ion-card>
+
+    <strong>Ready to create an app?</strong>
+    <p>
+      Start with Ionic
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://ionicframework.com/docs/components"
+        >UI Components</a
+      >
+    </p>
+  </div>
+</ion-content>

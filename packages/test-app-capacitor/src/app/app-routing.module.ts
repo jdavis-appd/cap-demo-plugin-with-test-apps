@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'session-frames',
+    loadChildren: () => import('./session-frames/session-frames.module').then( m => m.SessionFramesPageModule)
+  },
 ];
 
 @NgModule({

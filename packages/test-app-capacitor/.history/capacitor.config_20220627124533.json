@@ -1,0 +1,17 @@
+{
+  "appId": "io.ionic.starter.appd",
+  "appName": "test-app-capacitor",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "plugins": {
+    "ADEUMMobileCapacitorPlugin": {
+      "ADEUM_APP_KEY": "AD-AAB-ABS-DFX",
+      "ADEUM_COLLECTOR_URL": "https://col.eum-appdynamics.com",
+      "ADEUM_SCREENSHOT_URL": "",
+      "ADEUM_SCREENSHOTS_ENABLED": false,
+      "ADEUM_LOGGING_LEVEL": 0,
+      "ADEUM_REACHABILITY_HOST": "http",
+      "ADEUM_INTERACTION_CAPTURE_MODE": 0
+    }
+  }
+}
