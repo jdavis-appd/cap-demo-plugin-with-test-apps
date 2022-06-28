@@ -18,16 +18,6 @@ export class SessionFramesPage implements OnInit {
 
   newSession() {
     console.log(this.sessionName);
-    ADEUMMobileCapacitorPlugin.getVersion().then((data) => {
-      console.log(data);
-    });
-    const agent_version = async () => {
-      const status = await ADEUMMobileCapacitorPlugin.getVersion();
-
-      console.log('Network status:', status);
-    };
-
-    console.log(agent_version);
     const sessionFramePromise = async () => {
       const {
         session_frame,
@@ -36,10 +26,9 @@ export class SessionFramesPage implements OnInit {
         session_frame_name: this.sessionName,
       });
       this.sessionFrameGuid = session_frame;
-      console.log(session_frame);
     };
-    console.log(sessionFramePromise.toString());
-    console.log(this.sessionFrameGuid);
+    console.log(sessionFramePromise);
+    console.log(this.sessionFrameGuid)
     this.showList = true;
   }
   updateSession() {

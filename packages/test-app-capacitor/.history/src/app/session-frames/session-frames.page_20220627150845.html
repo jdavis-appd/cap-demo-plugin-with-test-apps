@@ -34,18 +34,18 @@
 
     <ion-list *ngIf="showList">
       <ion-item>
-        {{ sessionFrameGuid }}
+        {{ sessionName }}
         <ion-input
-          id="sessionNameUpdate"
-          [(ngModel)]="sessionNameUpdate"
-          placeholder="{{ sessionName }} "
-          type="text"
-          style="border: solid 1px #000"
-        ></ion-input>
-        <ion-button id="sessionUpdate" fill="outline" (click)="updateSession()"
-          >Update Session</ion-button
-        >
-      </ion-item> </ion-list
-    >>
+            id="sessionNameUpdate"
+            [(ngModel)]="sessionNameUpdate"
+            placeholder="Session Name"
+            type="text"
+            style="border: solid 1px #000"
+          ></ion-input>
+          <ion-button id="sessionUpdate" fill="outline" (click)="updateSession()"
+            >Create New Session</ion-button
+          >
+      </ion-item>
+    </ion-list>>
   </div>
 </ion-content>

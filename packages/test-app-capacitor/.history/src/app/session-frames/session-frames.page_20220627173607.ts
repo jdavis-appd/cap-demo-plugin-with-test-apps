@@ -18,15 +18,11 @@ export class SessionFramesPage implements OnInit {
 
   newSession() {
     console.log(this.sessionName);
-    ADEUMMobileCapacitorPlugin.getVersion().then((data) => {
-      console.log(data);
-    });
+    console.log(ADEUMMobileCapacitorPlugin.getVersion());
     const agent_version = async () => {
-      const status = await ADEUMMobileCapacitorPlugin.getVersion();
-
-      console.log('Network status:', status);
+      const { version } = await ADEUMMobileCapacitorPlugin.getVersion();
+      console.log()
     };
-
     console.log(agent_version);
     const sessionFramePromise = async () => {
       const {
