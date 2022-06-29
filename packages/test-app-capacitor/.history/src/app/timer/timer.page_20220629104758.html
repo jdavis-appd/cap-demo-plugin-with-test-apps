@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>session_frames</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Test Timer Function</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">New Timer with Name:</ion-label>
+
+          <ion-input
+            id="timerName"
+            [(ngModel)]="timer"
+            placeholder="Timer Name"
+            type="text"
+            style="border: solid 1px #000"
+          ></ion-input>
+
+          <ion-button id="timerCreate" fill="outline" (click)="newTimer()"
+            >Create New Timer</ion-button
+          >
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-list *ng>
+      <ion-item> {{ sessionFrameGuid }} </ion-item>
+      <ion-item>
+        <ion-input
+          id="sessionNameUpdate"
+          [(ngModel)]="sessionNameUpdate"
+          placeholder="{{ sessionName }} "
+          type="text"
+          style="border: solid 1px #000"
+        ></ion-input></ion-item
+      ><ion-item>
+        <ion-button id="sessionUpdate" fill="outline" (click)="updateSession()"
+          >Update Session</ion-button
+        ></ion-item
+      >
+      <ion-item>
+        <ion-button id="sessionEnd" fill="outline" (click)="endSession()"
+          >End Session</ion-button
+        >
+      </ion-item> </ion-list
+    >>
+  </div>
+</ion-content>

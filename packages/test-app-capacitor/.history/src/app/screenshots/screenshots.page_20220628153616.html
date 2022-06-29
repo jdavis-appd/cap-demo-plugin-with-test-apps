@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>screenshots</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Screenshots Function Test</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>{{ isScreenBlocked }}</ion-item>
+
+        <ion-item>
+          <ion-button id="blockScreen" fill="outline" (click)="changeScreen(action)"
+            >{{ action }}</ion-button
+          >
+        </ion-item>
+        <ion-item>
+          <ion-button id="takeScreenShot" fill="outline" (click)="takeScreenShot()"
+            >{{ action }}</ion-button
+          >
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+
+  </div>
+</ion-content>

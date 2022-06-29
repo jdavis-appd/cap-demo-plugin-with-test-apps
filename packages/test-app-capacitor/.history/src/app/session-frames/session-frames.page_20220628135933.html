@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>session_frames</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Test New Session With Name Function</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">New Session with Name:</ion-label>
+
+          <ion-input
+            id="sessionName"
+            [(ngModel)]="sessionName"
+            placeholder="Session Name"
+            type="text"
+            style="border: solid 1px #000"
+          ></ion-input>
+
+          <ion-button id="sessionCreate" fill="outline" (click)="newSession()"
+            >Create New Session</ion-button
+          >
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-list *ngIf="showList">
+      <ion-item>
+        {{ sessionFrameGuid }}
+        
+        <ion-input
+          id="sessionNameUpdate"
+          [(ngModel)]="sessionNameUpdate"
+          placeholder="{{ sessionName }} "
+          type="text"
+          style="border: solid 1px #000"
+        ></ion-input>
+        <ion-button id="sessionUpdate" fill="outline" (click)="updateSession()"
+          >Update Session</ion-button
+        >
+        <ion-button id="sessionEnd" fill="outline" (click)="endSession()"
+          >End Session</ion-button
+        >
+      </ion-item> </ion-list
+    >>
+  </div>
+</ion-content>

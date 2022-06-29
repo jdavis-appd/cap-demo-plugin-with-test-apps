@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>custom-metrics</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>TestMetric With Name Function</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">New Metric Name:</ion-label>
+
+          <ion-input
+            id="sessionName"
+            [(ngModel)]="metricName"
+            placeholder="Metric Name"
+            type="text"
+            style="border: solid 1px #000"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+
+        </ion-item>
+        <ion-item>
+          <ion-button id="sessionCreate" fill="outline" (click)="newMetric()"
+            >Create New Metric</ion-button
+          >
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-list *ngFor="let metric of metrics">
+      <ion-item> {{ met }} </ion-item>
+      <ion-item>
+        <ion-input
+          id="sessionNameUpdate"
+          [(ngModel)]="sessionNameUpdate"
+          placeholder="{{ sessionName }} "
+          type="text"
+          style="border: solid 1px #000"
+        ></ion-input></ion-item
+      ><ion-item>
+        <ion-button id="sessionUpdate" fill="outline" (click)="updateSession()"
+          >Update Session</ion-button
+        ></ion-item
+      >
+      <ion-item>
+        <ion-button id="sessionEnd" fill="outline" (click)="endSession()"
+          >End Session</ion-button
+        >
+      </ion-item> </ion-list
+    >>
+  </div>
+</ion-content>
