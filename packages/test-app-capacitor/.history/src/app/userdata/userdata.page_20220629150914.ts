@@ -41,6 +41,5 @@ export class UserdataPage implements OnInit {
         this.userData.splice(idx, 1);
       }
     });
-    
   }
 }

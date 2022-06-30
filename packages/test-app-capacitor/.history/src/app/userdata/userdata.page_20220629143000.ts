@@ -7,40 +7,25 @@ import { ADEUMMobileCapacitorPlugin } from 'appd-ionic-capacitor-plugin';
   styleUrls: ['./userdata.page.scss'],
 })
 export class UserdataPage implements OnInit {
+
   userDataKey: string = undefined;
   userDataValue: string = undefined;
-  userData = [];
+  userdata = [];
   constructor() {}
 
   ngOnInit() {}
 
   newUserData() {
-    const userDataPromise = async () => {
-      await ADEUMMobileCapacitorPlugin.setUserData({
-        key: this.userDataKey,
-        value: this.userDataValue,
-      });
+    const metricPromise = async () => {
+      await ADEUMMobileCapacitorPlugin.setUserData({key: this.userDataKey, value: this.userDataValue});
     };
-    userDataPromise();
-    this.userData.push({
+    metricPromise();
+    this.userdata.push({
       key: this.userDataKey,
       value: this.userDataValue,
     });
     this.userDataKey = undefined;
     this.userDataValue = undefined;
   }
-  removeUserData(key: string) {
-    this.userData.forEach((val, idx) => {
-      if(val.key === key){
-        const userDataPromise = async () => {
-          await ADEUMMobileCapacitorPlugin.removeUserData({
-            key
-          });
-        };
-        userDataPromise();
-        this.userData.splice(idx, 1);
-      }
-    });
-    
-  }
+
 }

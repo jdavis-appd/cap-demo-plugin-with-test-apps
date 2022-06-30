@@ -6,7 +6,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { ADEUMMobileCapacitorPlugin } from 'appd-ionic-capacitor-plugin';
 
 @NgModule({
   declarations: [AppComponent],

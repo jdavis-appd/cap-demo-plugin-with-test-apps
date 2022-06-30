@@ -37,7 +37,7 @@
         </ion-item>
         <ion-item>
           <ion-button id="userDataCreate" fill="outline" (click)="newUserData()"
-            >Create New UserData</ion-button
+            >Create New Metric</ion-button
           >
         </ion-item>
       </ion-card-content>
@@ -45,9 +45,6 @@
 
     <ion-list *ngFor="let data of userData">
       <ion-item> {{ data.key }}: {{ data.value}} </ion-item>
-      <ion-item>
-        <ion-button id="removeUserData" fill="outline" (click)="removeUserData(data.key)">remove</ion-button>
-      </ion-item>
     </ion-list>
   </div>
 </ion-content>

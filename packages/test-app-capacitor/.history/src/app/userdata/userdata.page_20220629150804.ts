@@ -29,18 +29,17 @@ export class UserdataPage implements OnInit {
     this.userDataKey = undefined;
     this.userDataValue = undefined;
   }
-  removeUserData(key: string) {
+  removeUserData(key) {
     this.userData.forEach((val, idx) => {
       if(val.key === key){
         const userDataPromise = async () => {
           await ADEUMMobileCapacitorPlugin.removeUserData({
-            key
+            key: key
           });
         };
         userDataPromise();
         this.userData.splice(idx, 1);
       }
     });
-    
   }
 }

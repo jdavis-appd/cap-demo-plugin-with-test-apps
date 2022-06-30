@@ -34,13 +34,12 @@ export class UserdataPage implements OnInit {
       if(val.key === key){
         const userDataPromise = async () => {
           await ADEUMMobileCapacitorPlugin.removeUserData({
-            key
+            key: key
           });
         };
         userDataPromise();
         this.userData.splice(idx, 1);
       }
     });
-    
   }
 }

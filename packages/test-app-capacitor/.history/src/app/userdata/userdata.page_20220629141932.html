@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
-    <ion-title>user data</ion-title>
+    <ion-title>custom-metrics</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -36,18 +36,15 @@
           ></ion-input>
         </ion-item>
         <ion-item>
-          <ion-button id="userDataCreate" fill="outline" (click)="newUserData()"
-            >Create New UserData</ion-button
+          <ion-button id="metricCreate" fill="outline" (click)="newUserData()"
+            >Create New Metric</ion-button
           >
         </ion-item>
       </ion-card-content>
     </ion-card>
 
-    <ion-list *ngFor="let data of userData">
-      <ion-item> {{ data.key }}: {{ data.value}} </ion-item>
-      <ion-item>
-        <ion-button id="removeUserData" fill="outline" (click)="removeUserData(data.key)">remove</ion-button>
-      </ion-item>
+    <ion-list *ngFor="let userdata of metrics">
+      <ion-item> {{ metric.metricName }}: {{ metric.metricValue}} </ion-item>
     </ion-list>
   </div>
 </ion-content>

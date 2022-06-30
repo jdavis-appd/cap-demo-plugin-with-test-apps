@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ADEUMMobileCapacitorPlugin } from 'appd-ionic-capacitor-plugin';
+//import { ADEUMMobileCapacitorPlugin } from 'appd-ionic-capacitor-plugin';
 
 @Component({
   selector: 'app-userdata',
@@ -15,32 +15,18 @@ export class UserdataPage implements OnInit {
   ngOnInit() {}
 
   newUserData() {
-    const userDataPromise = async () => {
+    const metricPromise = async () => {
       await ADEUMMobileCapacitorPlugin.setUserData({
         key: this.userDataKey,
         value: this.userDataValue,
       });
     };
-    userDataPromise();
+    metricPromise();
     this.userData.push({
       key: this.userDataKey,
       value: this.userDataValue,
     });
     this.userDataKey = undefined;
     this.userDataValue = undefined;
-  }
-  removeUserData(key: string) {
-    this.userData.forEach((val, idx) => {
-      if(val.key === key){
-        const userDataPromise = async () => {
-          await ADEUMMobileCapacitorPlugin.removeUserData({
-            key
-          });
-        };
-        userDataPromise();
-        this.userData.splice(idx, 1);
-      }
-    });
-    
   }
 }
