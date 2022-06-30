@@ -39,6 +39,14 @@ const routes: Routes = [
     path: 'userdata',
     loadChildren: () => import('./userdata/userdata.module').then( m => m.UserdataPageModule)
   },
+  {
+    path: 'methodcalls',
+    loadChildren: () => import('./methodcalls/methodcalls.module').then( m => m.MethodcallsPageModule)
+  },
+  {
+    path: 'httpcalls',
+    loadChildren: () => import('./httpcalls/httpcalls.module').then( m => m.HttpcallsPageModule)
+  },
 ];
 
 @NgModule({
