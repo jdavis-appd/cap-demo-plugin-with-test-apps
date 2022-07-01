@@ -60,7 +60,7 @@ export class HttpcallsPage implements OnInit {
       });
       this.httpCalls.forEach((val, idx) => {
         if (val.http_tracker === httpTracker) {
-          val.error_message = this.errorMsg;
+          val.statusCode = this.errorMsg;
         }
       });
       this.errorMsg = undefined;

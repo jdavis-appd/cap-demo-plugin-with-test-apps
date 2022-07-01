@@ -36,15 +36,13 @@
       <ion-item>Tracking ID: {{ httpCall.http_tracker }}: {{ httpCall.url}} </ion-item>
       <ion-item>Url: {{ httpCall.url}} </ion-item>
       <ion-item>
-        <ion-label position="floating">{{httpCall.statusCode}}</ion-label>
         <ion-input
-            id="{{ httpCall.http_tracker }}_statusCode"
-            [(ngModel)]="statusCode"
-            placeholder="404"
-            type="number"
+            id="httpUrl"
+            [(ngModel)]="httpUrl"
+            placeholder="url"
+            type="text"
             style="border: solid 1px #000"
-          ></ion-input>
-          <ion-button id="{{ httpCall.http_tracker }}_statusCodeBtn" fill="outline" (click)="statusCodeHttp(httpCall.http_tracker)">Set Status</ion-button>
+          ></ion-input><ion-button id="endHttp" fill="outline" (click)="endHttp(httpCall.http_tracker)">End</ion-button>
       </ion-item>
       <ion-item>
         <ion-button id="endHttp" fill="outline" (click)="endHttp(httpCall.http_tracker)">End</ion-button>

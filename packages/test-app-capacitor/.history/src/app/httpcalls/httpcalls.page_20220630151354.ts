@@ -56,14 +56,14 @@ export class HttpcallsPage implements OnInit {
       await ADEUMMobileCapacitorPlugin.withErrorMessage({
         // eslint-disable-next-line @typescript-eslint/naming-convention
         http_tracker: httpTracker,
-        error_message: this.errorMsg
+        error_message: this.statusCode
       });
       this.httpCalls.forEach((val, idx) => {
         if (val.http_tracker === httpTracker) {
-          val.error_message = this.errorMsg;
+          val.statusCode = this.statusCode;
         }
       });
-      this.errorMsg = undefined;
+      this.statusCode = undefined;
     };
     httpPromise();
   }

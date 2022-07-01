@@ -10,8 +10,6 @@ import { ADEUMMobileCapacitorPlugin } from 'appd-ionic-capacitor-plugin';
 export class HttpcallsPage implements OnInit {
   httpUrl: string = undefined;
   httpCalls = [];
-  statusCode: string = undefined;
-  errorMsg: string = undefined;
   constructor() {}
 
   ngOnInit() {}
@@ -33,40 +31,7 @@ export class HttpcallsPage implements OnInit {
     };
     httpPromise();
   }
-  statusCodeHttp(httpTracker: string) {
-    console.log(httpTracker);
-    const httpPromise = async () => {
-      await ADEUMMobileCapacitorPlugin.withResponseCode({
-        // eslint-disable-next-line @typescript-eslint/naming-convention
-        http_tracker: httpTracker,
-        status_code: this.statusCode
-      });
-      this.httpCalls.forEach((val, idx) => {
-        if (val.http_tracker === httpTracker) {
-          val.statusCode = this.statusCode;
-        }
-      });
-      this.statusCode = undefined;
-    };
-    httpPromise();
-  }
-  errorMsgHttp(httpTracker: string) {
-    console.log(httpTracker);
-    const httpPromise = async () => {
-      await ADEUMMobileCapacitorPlugin.withErrorMessage({
-        // eslint-disable-next-line @typescript-eslint/naming-convention
-        http_tracker: httpTracker,
-        error_message: this.errorMsg
-      });
-      this.httpCalls.forEach((val, idx) => {
-        if (val.http_tracker === httpTracker) {
-          val.error_message = this.errorMsg;
-        }
-      });
-      this.errorMsg = undefined;
-    };
-    httpPromise();
-  }
+
   endHttp(httpTracker: string) {
     console.log(httpTracker);
     const httpPromise = async () => {
@@ -75,10 +40,11 @@ export class HttpcallsPage implements OnInit {
         http_tracker: httpTracker,
       });
       this.httpCalls.forEach((val, idx) => {
-        if (val.http_tracker === httpTracker) {
-          this.httpCalls.splice(idx, 1);
+        if(val.http_tracker === httpTracker){
+          
         }
       });
+
     };
     httpPromise();
   }
