@@ -9,7 +9,7 @@
 			"ADEUM_COLLECTOR_URL": "https://col.eum-appdynamics.com",
 			"ADEUM_SCREENSHOT_URL": "https://image.eum-appdynamics.com",
 			"ADEUM_SCREENSHOTS_ENABLED": false,
-			"ADEUM_LOGGING_LEVEL": 0,
+			"ADEUM_LOGGING_LEVEL": 1,
 			"ADEUM_REACHABILITY_HOST": "http://google.com",
 			"ADEUM_INTERACTION_CAPTURE_MODE": 0
 		}
